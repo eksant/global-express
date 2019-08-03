@@ -2,13 +2,36 @@
   "name": "global-express",
   "version": "0.0.1",
   "description": "A Command line interface for instantly building an express",
-  "main": "./lib/cli.js",
-  "repository": "git@github.com:eksant/global-express.git",
   "author": "eksant <eksant@gmail.com>",
   "license": "MIT",
   "preferGlobal": true,
+  "main": "./bin/cli.js",
+  "bin": "./bin/cli.js",
+  "homepage": "https://github.com/eksant/global-express#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eksant/global-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eksant/global-express/issues"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "node",
+    "node.js",
+    "express.js",
+    "rest",
+    "cli",
+    "graphql",
+    "swagger",
+    "global-express",
+    "express-api",
+    "eksa"
+  ],
   "scripts": {
-    "cli": "rm -rf express && node ./lib/cli.js"
+    "cli": "rm -rf express && node ./bin/cli.js",
+    "test": "mocha || true"
   },
   "dependencies": {
     "commander": "^2.20.0",
