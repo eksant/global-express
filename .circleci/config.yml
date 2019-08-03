@@ -22,7 +22,7 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: Unit Testing for NodeJs 6
+          name: Unit Testing
           command: npm run test
 
 workflows:
