@@ -1,0 +1,22 @@
+{
+  "name": "global-express",
+  "version": "0.0.1",
+  "description": "A Command line interface for instantly building an express",
+  "main": "./lib/cli.js",
+  "repository": "git@github.com:eksant/global-express.git",
+  "author": "eksant <eksant@gmail.com>",
+  "license": "MIT",
+  "preferGlobal": true,
+  "scripts": {
+    "cli": "rm -rf express && node ./lib/cli.js"
+  },
+  "dependencies": {
+    "commander": "^2.20.0",
+    "figlet": "^1.2.3",
+    "inquirer": "^6.5.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "global-express",
+  "version": "1.0.0",
+  "description": "A service data published by the Global Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "apollo-server": "*",
+    "apollo-server-express": "*",
+    "body-parser": "*",
+    "chalk": "*",
+    "compression": "*",
+    "cors": "*",
+    "debug": "*",
+    "dotenv": "*",
+    "express": "*",
+    "express-rate-limit": "*",
+    "graphql": "*",
+    "graphql-resolvers": "*",
+    "graphql-tools": "*",
+    "helmet": "*",
+    "morgan": "*",
+    "multer": "*",
+    "nconf": "*",
+    "swagger-jsdoc": "*",
+    "swagger-ui-express": "*"
+  }
+}
