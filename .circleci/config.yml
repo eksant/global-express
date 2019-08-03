@@ -17,6 +17,8 @@ jobs:
           command: npm install
       - save_cache:
           key: v1-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
       - run:
           name: Unit Testing for NodeJs 6
           command: npm run test
