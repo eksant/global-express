@@ -6,7 +6,12 @@
   "license": "MIT",
   "preferGlobal": true,
   "main": "./bin/cli.js",
-  "bin": "./bin/cli.js",
+  "bin": {
+    "global-express": "./bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/eksant/global-express#readme",
   "repository": {
     "type": "git",
