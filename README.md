@@ -1,7 +1,7 @@
 # Global Express
 
 A Command line interface for instantly building an express server.  
-Create models, graphql (resolvers and schema) and rest-api (controllers, routes and services) in matter of seconds.
+Create models, graphql (resolvers and schema), rest-api (controllers, routes and services) and doc-api (swagger) in matter of seconds.
 
 ## Installation
 
@@ -48,7 +48,7 @@ my-server
 $ npm install
 ```
 
-_Note: when running all of the further commands, please stay in the my-app directory_
+_Note: when running all of the further commands, please stay in the my-server directory_
 
 ## Notes
 
