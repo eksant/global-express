@@ -11,7 +11,9 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: v1-{{ .Branch }}-{{ checksum "package.json" }}
+          keys: 
+            - v1-{{ .Branch }}-{{ checksum "package.json" }}
+            - v1-{{ .Branch }}-
       - run:
           name: Install Dependencies
           command: npm install
