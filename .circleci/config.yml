@@ -1,0 +1,32 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/global-express
+  docker:
+    - image: circleci/node:6
+
+jobs:
+  test:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys: v1-{{ .Branch }}-{{ checksum "package.json" }}
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - save_cache:
+          key: v1-{{ .Branch }}-{{ checksum "package.json" }}
+      - run:
+          name: Unit Testing for NodeJs 6
+          command: npm run test
+
+workflows:
+  version: 2
+  global-express:
+    jobs:
+      - test:
+          filters:
+            branches:
+              only:
+                - master
