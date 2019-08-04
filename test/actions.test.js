@@ -3,24 +3,24 @@ const lignator = require('lignator');
 const assert = require('chai').assert;
 const expect = require('chai').expect;
 
-const actions = require('../bin/actions');
-const init = async path => {
-  if (await fs.existsSync(path)) {
-    await lignator.remove(path);
-  }
-  await actions.init(path);
-};
-
-const clean = async path => {
-  if (await fs.existsSync(path)) {
-    await lignator.remove(path);
-  }
-};
-
 const expPath = 'express';
-init(expPath);
+const actions = require('../bin/actions');
+const init = async () => {
+  if (await fs.existsSync(expPath)) {
+    await lignator.remove(expPath);
+  }
+  await actions.init(expPath);
+};
 
+const clean = async () => {
+  if (await fs.existsSync(expPath)) {
+    await lignator.remove(expPath);
+  }
+};
+
+init();
 require('chai').use(require('chai-fs'));
+
 describe('Global-Express Actions Init Testing :', () => {
   it(`should create folder ${expPath} if it does not exist`, async () => {
     await expect(`${expPath}`).to.be.a.directory();
@@ -100,7 +100,7 @@ describe('Global-Express Actions Init Testing :', () => {
 
 describe('Global Express Actions Clean Testing :', () => {
   it(`should delete folder ${expPath} if it exist`, async () => {
-    await clean(expPath);
+    await clean();
     await expect(`${expPath}`).to.not.be.a.path();
     await assert.notPathExists(`${expPath}`);
   });
