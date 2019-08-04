@@ -4,18 +4,18 @@ const assert = require('chai').assert;
 const expect = require('chai').expect;
 
 const actions = require('../bin/actions');
-async function init(path) {
+const init = async path => {
   if (await fs.existsSync(path)) {
     await lignator.remove(path);
   }
   await actions.init(path);
-}
+};
 
-async function clean(path) {
+const clean = async path => {
   if (await fs.existsSync(path)) {
     await lignator.remove(path);
   }
-}
+};
 
 const expPath = 'express';
 init(expPath);
