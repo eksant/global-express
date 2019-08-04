@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          keys: 
+          keys:
             - v1-{{ .Branch }}-{{ checksum "package.json" }}
             - v1-{{ .Branch }}-
       - run:
@@ -29,8 +29,4 @@ workflows:
   version: 2
   global-express:
     jobs:
-      - test:
-          filters:
-            branches:
-              only:
-                - master
+      - test
